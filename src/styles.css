@@ -1,3 +1,18 @@
 h1 {
-    color:red;
+    color:darkgray;
+}
+
+.allPage{
+    margin-left: 5%;
+}
+header{
+    margin-left:10%;
+}
+
+.list-group{
+    border-radius: 5%;
+}
+
+.errorMessageSpace{
+    color: rgb(207, 7, 7);
 }

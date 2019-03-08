@@ -1,10 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Webpack Showcase</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>TIP PLEASE</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>Welcome to Class.</h1>
+    <div class="container"></div>
+    <header class="page-header">
+        <h1>Tip Calculator</h1>
+    </header>
+    <section class="allPage">
+        <form class="needs-validation">
+            <div class="col-auto">
+                <label class="sr-only"
+                       for="inlineFormInputGroup validation-custom1">Cost</label>
+                <div class="input-group mb-1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">$</div>
+                    </div>
+                    <input type="number"
+                           class="form-control"
+                           id="inlineFormInputGroup"
+                           placeholder="Cost of meal"
+                           onkeyup="verifyCostInput()">
+                </div>
+            </div>
+        </form>
+        <div class="errorMessageSpace">
+
+        </div>
+        <div class="btn-group"
+             role="group"
+             aria-label="Basic example">
+            <button type="button"
+                    class="btn btn-secondary ten"
+                    id="10">10%</button>
+            <button type="button"
+                    class="btn btn-secondary fif"
+                    id="15">15%</button>
+            <button type="button"
+                    class="btn btn-secondary twe"
+                    id="20">20%</button>
+        </div>
+        <div>
+            <h6 class="displayPercentage">You are tipping </h6>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item billAmount">Bill Amount: $</li>
+            <li class="list-group-item tipPercentage">Tip Percentage: </li>
+            <li class="list-group-item tipAmount">Amount of tip: $</li>
+            <li class="list-group-item total">Total to be Paid: $</li>
+        </ul>
+        <div>
+
+        </div>
+    </section>
+
+    </div>
 </body>
+
 </html>
