@@ -34,26 +34,29 @@ function updateDisplayPercentage(p: number) {
 
     dsection.innerHTML = `You are tipping ${p}%`;
 
-    bsection.innerText = `Bill Amount: $${inputNum}`;
+    bsection.innerText = `Bill Amount: $${inputNum.toFixed(2)}`;
     tipsection.innerText = `Tip Percentage: ${p}%`;
 
     let tipAmount: number = (p * .01) * inputNum;
     let finalCost = tipAmount + inputNum;
-    asection.innerText = `Amount of tip: $${tipAmount}`;
-    totalsection.innerText = `Total to be Paid: $${finalCost}`;
-
+    asection.innerText = `Amount of tip: $${tipAmount.toFixed(2)}`;
+    totalsection.innerText = `Total to be Paid: $${finalCost.toFixed(2)}`;
 }
 
 function verifyCostInput() {
     let inputNum = costInput.valueAsNumber;
     let errorSection: HTMLDivElement = document.querySelector('.errorMessageSpace');
+    let formBorder: HTMLFormElement = document.querySelector('.form-control');
     if (isNaN(inputNum)) {
         errorSection.innerHTML = 'MAKE IT A POSITIVE NUMBER HOE';
+        formBorder.classList.add('needs-validation');
     }
     if (inputNum <= 0) {
         errorSection.innerHTML = 'MAKE IT A POSITIVE NUMBER HOE';
+        formBorder.classList.add('needs-validation');
     }
     if (inputNum > 0) {
         errorSection.innerHTML = "";
+        formBorder.classList.remove('needs-validation');
     }
 }

@@ -16,3 +16,7 @@ header{
 .errorMessageSpace{
     color: rgb(207, 7, 7);
 }
+
+.needs-validation{
+    border: 1px solid #dc3545;
+}
